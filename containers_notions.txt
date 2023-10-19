@@ -1,0 +1,15 @@
+CONTAINERS
+
+la STL contient 2 choses ->1) les containers par templates, et 2) les algorythms
+
+Les containers
+list templatees sur int - > list<int> (exemple)
+
+les iterators
+se comportent comme un pointeurs
+
+lib<vector> pour les tableaux qui peut contenir ce qu'on veut
+initialisation 
+-> std::vector<int> v1;
+ou 
+-> std::vector<int> v2(42, 100); (creation de 42 entree qui contiendront par default le nb 100)
