@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:10:09 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/19 19:02:55 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:18:20 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 class Span
 {
 	private:
-		int		_n;
-		int*	_array;
+		int					_n;
+		std::vector<int>	_array;
 		
 	public:
 		Span();
@@ -37,18 +37,21 @@ class Span
 		~Span();
 
 		void 	addNumber(int nb);
-		int 	shortestSpan(int *tab);
-		int		longestSpan(int *tab);
-		int		getNb(void) const;
+		int 	shortestSpan(void) const;
+		int		longestSpan(void) const;
+		int		getMax(void) const;
+		int		size(void) const;
 	
 	class CantAddNumber : std::exception
 	{
 		public:
 		virtual const char* what() const throw()
 		{
-			return (RED "cANNOT ADD NUMBER, TAB'S FULL." DEFAULT);
+			return (RED "CANNOT ADD NUMBER, TAB'S FULL." DEFAULT);
 		}
 	};
 };
+
+std::ostream &operator<<( std::ostream &o, Span const &s);
 
 #endif
