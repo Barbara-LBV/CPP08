@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:13:53 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/19 18:48:38 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:54:31 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main()
 	
 	try
 	{
-		occ2 = easyfind(v, 40);
+		occ2 = easyfind(v, 0);
 		std::cout << "Occurrence = " << occ2 << std::endl;
 	}
 	catch(const std::exception& e)
