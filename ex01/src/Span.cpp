@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:14:06 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/24 16:59:19 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:22:13 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ std::ostream &operator<<( std::ostream &o, Span &s)
 	int	shortest = s.shortestSpan();
 	int	longest = s.longestSpan();
 
-	o << BOLD "Span of max size " << s.getMax() << " contains: " << std::endl
-		<< s.size() << " numbers, " << std::endl
-		<< "Shortest span is " << shortest<< std::endl 
-		<< "Longest is " << longest << DEFAULT;
+	o << BOLD "Span of max size " << s.getMax() << " contains: " DEFAULT << std::endl
+		<< s.size() << " nbs" << std::endl
+		<< "Shortest span = " << shortest<< std::endl 
+		<< "Longest span = " << longest;
 	return (o);
 }
 
@@ -74,16 +74,15 @@ void 	Span::addNumber(int nb)
 		_array.push_back(nb);
 	else if (this->size() == this->getMax())
 	{
-		throw std::out_of_range(YELLOW "Cannot add number, reach the max size of the array." DEFAULT);
+		throw std::out_of_range(YELLOW "Can't add another number, you reached the array maximum capacity." DEFAULT);
 	}
-	//std::cout << _array.at(size()- 1) << std::endl;
 }
 
 void	Span::addMultipleNb(void)
 {
 	std::srand (unsigned(std::time(0)));
 	for (int i = 0; i < _n; i++)
-		addNumber(rand() % (this->getMax() * 10));
+		addNumber(rand() % (getMax() * 10));
 }
 
 int 	Span::shortestSpan(void)
@@ -92,7 +91,7 @@ int 	Span::shortestSpan(void)
 	std::vector<int>::iterator 	it = tmp.begin();
 	
 	if (tmp.size() <= 1)
-		throw std::logic_error("Not enough numbers stored to provide a span");
+		throw std::logic_error(YELLOW "Not enough numbers stored to provide a span" DEFAULT);
 	sort(tmp.begin(), tmp.end());	
 	int shortest = (*(it + 1)) - *it;
 	for ( ; it != tmp.end() - 1 && shortest != 0; it++)

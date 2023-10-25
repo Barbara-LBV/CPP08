@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:10:09 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/24 16:59:10 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:19:45 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ class Span
 
 		void 	addNumber(int nb);
 		void	addMultipleNb(void);
-		
 		int 	shortestSpan(void);
 		int		longestSpan(void);
 		int		getMax(void) const;

@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:09:41 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/19 18:43:50 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:13:10 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	easyfind(const T &src, int find)
 	typename T::const_iterator	ite = src.end();
 	
 	it = std::find(src.begin(), src.end(), find);
-	 if (it != ite)
+	if (it != ite)
         return (*it);
     else
 		throw std::out_of_range (RED "No corresponding data found in container" DEFAULT);
