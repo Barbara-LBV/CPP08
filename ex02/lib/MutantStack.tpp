@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:10:58 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/24 18:14:42 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:53:16 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,7 @@ template<typename T>
 MutantStack<T> &MutantStack<T>::operator=(MutantStack <T> const &m)
 {
 	std::cout << BOLD "Assignment operator called." DEFAULT << std::endl;
-	//this->_array = new T[a._n];
-	if (this != &m)
-	{
-		//delete [] _array;
-		//_n = a.size();
-		//_array = new T[_n];
-		//for (int i = 0; i < _n; i++)
-		//	_array[i] = a._array[i];
-	}
+	(void)m;
 	return (*this);
 }
 
@@ -47,14 +39,14 @@ MutantStack<T>::~MutantStack()
 	std::cout << BOLD "Destructor called." DEFAULT << std::endl;
 }
 
-template<typename T>
-T 	&MutantStack<T>::begin(void)
+template <typename T>
+typename MutantStack<T>::iterator MutantStack<T>::begin(void)
 {
-	return (T);
+    return std::stack<T>::c.begin();
 }
 
-template<typename T>
-T 	&MutantStack<T>::end(void)
+template <typename T>
+typename MutantStack<T>::iterator MutantStack<T>::end(void)
 {
-	return (T);
+    return std::stack<T>::c.end();
 }

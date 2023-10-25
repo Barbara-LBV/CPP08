@@ -13,3 +13,30 @@ initialisation
 -> std::vector<int> v1;
 ou 
 -> std::vector<int> v2(42, 100); (creation de 42 entree qui contiendront par default le nb 100)
+
+NOTIONS EX02
+std::stack est un adaptator de containers, il prend 3 parametres.
+
+prototypage : template <class T, class Container = deque<T> > class stack;
+
+1e param : value_type qui est en T (template)
+
+2e param : stack::container_type (un sous-container dont il faut definir le type)
+   Ses containers standards sont vector, list et deque. Si aucun container n'est 
+   specifie, il prend par defaut "deque".
+   
+3e param : size_type, un entier non-signe, generalement de type size_t.
+
+****************************************************************************
+container deque (Double Ended QUeue)
+
+Double-ended queues are sequence containers with dynamic sizes that can be
+expanded or contracted on both ends (either its front or its back).
+
+prototypage : template < class T, class Alloc = allocator<T> > class deque;
+
+unlike vectors, deques are not guaranteed to store all its elements in 
+contiguous storage locations. 
+For operations that involve frequent insertion or removals of elements 
+at positions other than the beginning or the end, deques perform worse 
+and have less consistent iterators and references than lists and forward lists.

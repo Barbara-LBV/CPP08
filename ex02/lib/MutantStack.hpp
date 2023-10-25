@@ -6,12 +6,12 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:11:01 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/24 18:14:01 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:52:30 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#ifdef MUTANTSTACK_HPP
-//#define MUTANTSTACK_HPP
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 
 #include <iostream>
 #include <string>
@@ -27,22 +27,27 @@
 # define BLUE "\001\033[1;36m\002"
 # define YELLOW "\001\033[1;93m\002"
 
+class iterator;
+
 template <typename T>
 class MutantStack : public std::stack<T>
 {
-	private:
-		T 	_array;
-		
 	public:
 		MutantStack();
-		MutantStack(const MutantStack<T> &s);
+		MutantStack(const MutantStack &s);
 		MutantStack &operator=(MutantStack const &m);
 		~MutantStack();
-
-		T 	&begin(void);
-		T 	&end(void);	
+		
+		typedef typename std::stack<T>::container_type::iterator iterator;
+		iterator	begin(void);
+		//{ 
+		//	return this->c.begin(); 
+		//}
+		
+		iterator	end(void); 
+		//{ 
+		//	return this->c.end();
+		//}
 };
 
-//std::ostream &operator<<( std::ostream &o, MutantStack const &m);
-
-//#endif
+#endif
