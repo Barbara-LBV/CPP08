@@ -3,7 +3,7 @@ CONTAINERS
 la STL contient 2 choses ->1) les containers par templates, et 2) les algorythms
 
 Les containers
-list templatees sur int - > list<int> (exemple)
+list templatees sur int - > list<int> (exemple)      ppp
 
 les iterators
 se comportent comme un pointeurs

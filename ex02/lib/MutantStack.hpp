@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:11:01 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/25 13:52:30 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:03:45 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,7 @@ class MutantStack : public std::stack<T>
 		
 		typedef typename std::stack<T>::container_type::iterator iterator;
 		iterator	begin(void);
-		//{ 
-		//	return this->c.begin(); 
-		//}
-		
 		iterator	end(void); 
-		//{ 
-		//	return this->c.end();
-		//}
 };
 
 #endif

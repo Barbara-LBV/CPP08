@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:13:53 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/24 15:54:31 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:58:39 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/easyfind.tpp"
 
-int main()
+int main(void)
 {
 	std::list<int>	lst;
 	int	occ;
@@ -52,5 +52,5 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	return 0;
+	return (0);
 }

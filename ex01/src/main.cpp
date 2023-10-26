@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:14:02 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/25 16:25:39 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:00:33 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int main()
 		sp.addNumber(3);
 		sp.addNumber(17);
 		sp.addNumber(9);
-		//sp.addNumber(11);
-		//sp.addNumber(25);
+		sp.addNumber(11);
+		sp.addNumber(25);
 	}
 	catch (const std::exception &e)
 	{
