@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:14:06 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/25 16:22:13 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/27 11:39:30 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,10 @@ void	Span::addMultipleNb(void)
 {
 	std::srand (unsigned(std::time(0)));
 	for (int i = 0; i < _n; i++)
-		addNumber(rand() % (getMax() * 10));
+	{
+		addNumber(rand() / 200);
+		usleep(100);
+	}
 }
 
 int 	Span::shortestSpan(void)
@@ -99,6 +102,10 @@ int 	Span::shortestSpan(void)
 		if ((*(it + 1) - *it) != 0 &&  (*(it + 1) - *it) < shortest)
 			shortest = *(it + 1) - *it;
 	}
+	//it = tmp.begin();
+	//for ( ; it != tmp.end(); it++)
+	//	std::cout << *it << ' ';
+	//std::cout << std::endl;
 	return (shortest);
 }
 

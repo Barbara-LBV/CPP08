@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:13:53 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/26 16:58:39 by root             ###   ########.fr       */
+/*   Updated: 2023/10/27 11:21:59 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	std::cout << std::endl;
 	std::cout << BOLD "*** Vectors Containers ***" DEFAULT<< std::endl;
@@ -45,12 +45,12 @@ int main(void)
 	
 	try
 	{
-		occ2 = easyfind(v, 0);
+		occ2 = easyfind(v, 40);
 		std::cout << "Occurrence = " << occ2 << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	return (0);
 }

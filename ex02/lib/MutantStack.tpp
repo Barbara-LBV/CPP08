@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:10:58 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/25 13:53:16 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/27 11:55:30 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ MutantStack<T> &MutantStack<T>::operator=(MutantStack <T> const &m)
 template<typename T>
 MutantStack<T>::~MutantStack()
 {
-	std::cout << BOLD "Destructor called." DEFAULT << std::endl;
+	std::cout << BOLD "Destructor called." DEFAULT << std::endl << std::endl;
 }
 
 template <typename T>

@@ -6,7 +6,7 @@
 /*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:10:09 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/25 16:19:45 by blefebvr         ###   ########.fr       */
+/*   Updated: 2023/10/27 11:32:14 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <algorithm>
 #include <ctime>
 #include <cstdlib> 
+#include <unistd.h>
 
 # define DEFAULT "\001\033[0;39m\002"
 # define BOLD "\001\033[1;89m\002"

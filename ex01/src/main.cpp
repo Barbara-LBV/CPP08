@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: blefebvr <blefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:14:02 by blefebvr          #+#    #+#             */
-/*   Updated: 2023/10/26 17:00:33 by root             ###   ########.fr       */
+/*   Updated: 2023/10/27 11:24:05 by blefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << sp2 << std::endl << std::endl;
+	std::cout << sp2 << std::endl << std::endl;	
 	
 	std::cout << RED "******* Another exception test *******" DEFAULT << std::endl;
 	Span sp3 = Span(1);
